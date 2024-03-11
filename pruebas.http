@@ -1,0 +1,163 @@
+GET http://localhost:3000/ HTTP/1.1
+
+###
+GET  http://localhost:3000/genero HTTP/1.1
+
+###
+POST http://localhost:3000/genero HTTP/1.1
+content-type: application/json
+
+{
+  "nombre": "Accion",
+  "estado": "Activo",
+  "descripcion": "Son muchos tiros"
+  }
+
+###
+PUT http://localhost:3000/genero/65ea007535a713515a5b7776 HTTP/1.1
+content-type: application/json
+
+{
+  "nombre": "Comedia",
+  "estado": "Activo",
+  "descripcion": "Risas y mas risas"
+  }
+
+###
+DELETE http://localhost:3000/genero/65ee526c2b0ae5363c4079c2 HTTP/1.1
+
+###
+GET  http://localhost:3000/director HTTP/1.1
+###
+POST  http://localhost:3000/director HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Steven S",
+    "estado": "Activo"
+  }
+
+###
+PUT  http://localhost:3000/director/65ee52cc2b0ae5363c4079cd HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Henrry C",
+    "estado": "Inactivo"
+  }
+
+###
+DELETE  http://localhost:3000/director/65ee52cc2b0ae5363c4079cd HTTP/1.1
+
+###
+GET  http://localhost:3000/productora HTTP/1.1
+###
+POST  http://localhost:3000/productora HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Universal Pictures",
+    "estado": "Activo",
+    "descripcion": "Universal pictures ",
+    "slogan": "pintando desde universal"
+  }
+
+###
+PUT  http://localhost:3000/productora/65ea00ac35a713515a5b777c HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Columbia Pictures",
+    "estado": "Activo",
+    "descripcion": "No es Colombia, es Columbia",
+    "slogan": "pintando desde Culumbia o desde Colombia?"
+  }
+
+###
+DELETE  http://localhost:3000/productora/65ee533e2b0ae5363c4079d7 HTTP/1.1
+
+###
+GET  http://localhost:3000/tipo HTTP/1.1
+###
+POST  http://localhost:3000/tipo HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Series",
+    "descripcion": "muchos capitulos"
+  }
+
+###
+PUT  http://localhost:3000/tipo/65ea00b735a713515a5b777f HTTP/1.1
+content-type: application/json
+
+{
+    
+    "nombre": "Peliculas",
+    "descripcion": "120 min"
+  }
+
+###
+DELETE  http://localhost:3000/tipo/65ee53912b0ae5363c4079e2 HTTP/1.1
+
+###
+GET  http://localhost:3000/media HTTP/1.1
+###
+POST  http://localhost:3000/media HTTP/1.1
+content-type: application/json
+
+{
+  "serial" : "A0002",
+    "titulo" : "Los vengadores 2",
+    "sinopsis" : "Heroes salvando el New York",
+    "url" : "https://youtu.be/yNXfOOL88244",
+    "imgPortada" : "https://pics.filmaffinity.com/the_avengers-439499921-large.jpg",
+    "estado" : "Activo",      
+    "anioEstreno" : 2012,
+    "genero" : {
+      "_id":"65ea007535a713515a5b7776"
+    },
+    "director" : {
+      "_id": "65ea00a435a713515a5b7779" 
+    } ,
+    "productora" :{
+      "_id": "65ea00ac35a713515a5b777c" 
+    } ,
+    "tipo" : {
+      "_id": "65ea00b735a713515a5b777f"
+    }
+}
+
+###
+PUT  http://localhost:3000/media/65ee543e2b0ae5363c4079f6 HTTP/1.1
+content-type: application/json
+
+{
+  "serial" : "A0003",
+    "titulo" : "Los vengadores 1",
+    "sinopsis" : "Heroes salvando el New York",
+    "url" : "https://youtu.be/yNXfOOL88244",
+    "imgPortada" : "https://pics.filmaffinity.com/the_avengers-439499921-large.jpg",
+    "estado" : "Activo",      
+    "anioEstreno" : 2012,
+    "genero" : {
+      "_id":"65ea007535a713515a5b7776"
+    },
+    "director" : {
+      "_id": "65ea00a435a713515a5b7779" 
+    } ,
+    "productora" :{
+      "_id": "65e933319f298477cbf59949" 
+    } ,
+    "tipo" : {
+      "_id": "65e8df4f24476fc48551ebe1"
+    }
+}
+
+###
+DELETE  http://localhost:3000/media/65ee543e2b0ae5363c4079f6 HTTP/1.1
